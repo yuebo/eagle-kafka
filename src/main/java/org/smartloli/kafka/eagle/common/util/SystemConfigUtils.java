@@ -43,12 +43,12 @@ public final class SystemConfigUtils {
 	private static void getReources(String name) {
 		try {
 			try {
-				String osName = System.getProperties().getProperty("os.name");
-				if (osName.contains("Mac") || osName.contains("Win")) {
+//				String osName = System.getProperties().getProperty("os.name");
+//				if (osName.contains("Mac") || osName.contains("Win")) {
 					mConfig.load(SystemConfigUtils.class.getClassLoader().getResourceAsStream(name));
-				} else {
-					mConfig.load(new FileInputStream(System.getProperty("user.dir") + "/conf/" + name));
-				}
+//				} else {
+//					mConfig.load(new FileInputStream(System.getProperty("user.dir") + "/conf/" + name));
+//				}
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}
